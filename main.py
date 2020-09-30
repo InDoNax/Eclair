@@ -4,7 +4,6 @@ import os
 import discord
 from dotenv import load_dotenv
 
-# TODO readme
 
 
 load_dotenv()
