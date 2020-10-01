@@ -20,17 +20,17 @@ async def first_message():
     for ch in client.get_all_channels():
         if ch.name == "role" and ch.type.name == "text":
             
-             async for msg in ch.history(limit=200):
-                 await msg.delete()
+            async for msg in ch.history(limit=200):
+                await msg.delete()
 
-            message = await ch.send('Welcome to the **' + ch.guild.name + '** server, \n \n There are many hidden channels here that we dont want you to be bothered with, but if you so choose just ping the topic you are interested in down here and enjoy ! \n :smile:')
-            msg_id = ch.last_message_id
-            message = await ch.fetch_message(msg_id)
+            message = await ch.send('Welcome to the **' + ch.guild.name + '** server, \n \n There are many hidden channels here that we dont want you to be bothered with, but if you so choose just ping the topic you re interested in down here and enjoy ! \n :smile:')
+            # msg_id = ch.last_message_id
+            # message = await ch.fetch_message(msg_id)
             for emoji in client.emojis:
                 if emoji.name.startswith("ec_"):
                     await message.add_reaction(emoji)
-
-
+ 
+        
 
 @client.event
 async def on_ready():
