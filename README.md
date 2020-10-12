@@ -15,7 +15,7 @@ As of right now to run simply install the requirements
 python -m pip install -r requirements.txt
 ```
 
-And the to run the app simply run the py file
+And then to run the app simply run the py file
 ```bash
 python main.py
 ```
